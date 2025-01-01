@@ -1,0 +1,219 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 20px;
+  background: url('https://static.vecteezy.com/system/resources/thumbnails/024/262/722/small_2x/blue-winter-natural-background-illustration-ai-generative-free-photo.jpg')
+    no-repeat bottom center;
+  background-size: cover;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+header {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1em;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.snowflake {
+  font-size: 1em;
+  font-family: Arial;
+  text-shadow: 0 0 1px #000;
+}
+
+@keyframes snowflakes-fall {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@keyframes snowflakes-shake {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.snowflake {
+  position: fixed;
+  color: #fff;
+  top: -10%;
+  z-index: 9999;
+  animation-name: snowflakes-fall, snowflakes-shake;
+  animation-duration: 10s, 3s;
+  animation-timing-function: linear, linear;
+  animation-iteration-count: infinite, infinite;
+}
+
+.snowflake:nth-of-type(0) {
+  left: 1%;
+  animation-delay: 0s, 0s;
+}
+
+.snowflake:nth-of-type(1) {
+  left: 10%;
+  animation-delay: 1s, 1s;
+}
+
+.snowflake:nth-of-type(2) {
+  left: 20%;
+  animation-delay: 2s, 0.5s;
+}
+
+.snowflake:nth-of-type(3) {
+  left: 30%;
+  animation-delay: 3s, 2s;
+}
+
+.snowflake:nth-of-type(4) {
+  left: 40%;
+  animation-delay: 4s, 2s;
+}
+
+.snowflake:nth-of-type(5) {
+  left: 50%;
+  animation-delay: 5s, 3s;
+}
+
+.snowflake:nth-of-type(6) {
+  left: 60%;
+  animation-delay: 6s, 2s;
+}
+
+.snowflake:nth-of-type(7) {
+  left: 70%;
+  animation-delay: 5s, 1s;
+}
+
+.snowflake:nth-of-type(8) {
+  left: 80%;
+  animation-delay: 4s, 0s;
+}
+
+.snowflake:nth-of-type(9) {
+  left: 90%;
+  animation-delay: 3s, 1.5s;
+}
+
+.snowflake:nth-of-type(10) {
+  left: 95%;
+  animation-delay:2s, 2s;
+}
+
+.snowflake:nth-of-type(11) {
+  left: 1%;
+  animation-delay: 6s, 1s;
+}
+
+.snowflake:nth-of-type(12) {
+  left: 10%;
+  animation-delay: 7s, 0.5s;
+}
+
+.snowflake:nth-of-type(13) {
+  left: 20%;
+  animation-delay: 8s, 2s;
+}
+
+.snowflake:nth-of-type(14) {
+  left: 30%;
+  animation-delay: 9s, 2s;
+}
+
+.snowflake:nth-of-type(15) {
+  left: 40%;
+  animation-delay: 10s, 3s;
+}
+
+.snowflake:nth-of-type(16) {
+  left: 50%;
+  animation-delay: 9s, 2s;
+}
+
+.snowflake:nth-of-type(17) {
+  left: 60%;
+  animation-delay: 8s, 1s;
+}
+
+.snowflake:nth-of-type(18) {
+  left: 80%;
+  animation-delay: 7s, 0s;
+}
+
+.snowflake:nth-of-type(19) {
+  left: 90%;
+  animation-delay: 6s, 1.5s;
+}
+
+.snowflake:nth-of-type(20) {
+  left: 95%;
+  animation-delay: 5s, 2s;
+}
+
+.items {
+  height: 600px;
+  padding: 100px;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  transform: scale(0.98);
+  will-change: transform;
+  position: relative;
+  perspective: 700px;
+}
+
+.items.active {
+  background: rgba(0, 0, 0, 0.15);
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+  transform: scale(1);
+}
+
+.item {
+  width: 200px;
+  height: calc(100% - 20px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid red;
+  box-shadow: inset 0 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.item:nth-child(even) {
+  transform: scaleX(1.1) rotateY(20deg);
+  background: cadetblue;
+}
+.item:nth-child(odd) {
+  transform: scaleX(1.1) rotateY(-20deg);
+  background: rebeccapurple;
+}
