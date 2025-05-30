@@ -12,11 +12,11 @@ slider.addEventListener('mousedown', (e) => {
   audio.play();
 });
 
-slider.addEventListener('mouseleave', (e) => {
-  isDown = false;
-  slider.classList.remove('active');
-  audio.pause();
-});
+// slider.addEventListener('mouseleave', (e) => {
+//   isDown = false;
+//   slider.classList.remove('active');
+//   audio.pause();
+// });
 
 slider.addEventListener('mouseup', (e) => {
   isDown = false;
