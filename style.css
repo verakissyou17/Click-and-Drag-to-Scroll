@@ -70,6 +70,11 @@ header {
   animation-duration: 10s, 3s;
   animation-timing-function: linear, linear;
   animation-iteration-count: infinite, infinite;
+  animation-play-state: paused, paused;
+}
+
+.snowflake.active {
+  animation-play-state: running, running;
 }
 
 .snowflake:nth-of-type(0) {
